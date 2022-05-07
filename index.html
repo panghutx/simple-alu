@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8功能运算器</title>
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://fastly.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <!-- js部分 -->
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="CSS/index.css">
+    <script src="JS/index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="jumbotron">
+                <h1 style="display:inline;margin-left: 60px;">八功能运算器实验平台</h1>
+                <span style="margin-left:80px;font-size: 20px;">panghutx</span>
+            
+              </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-xs-12 rightBox" >
+                <h3>功能选项</h3>
+                <!-- 按钮和输入框 -->
+
+                <div class="inputbox"> 
+                    I5: <input type="text" id="i5" value="0"> 
+                    <input type="checkbox" name="sex" id="male1" class="chooseBtn" />
+                    <label for="male1" class="choose-label"></label><br>
+
+                    I4: <input type="text" id="i4" value="0"> 
+                    <input type="checkbox" name="sex" id="male2" class="chooseBtn" />
+                    <label for="male2" class="choose-label"></label><br>
+
+                    I3: <input type="text" id="i3" value="0"> 
+                    <input type="checkbox" name="sex" id="male3" class="chooseBtn" />
+                    <label for="male3" class="choose-label"></label>
+                </div >
+
+                <!-- 功能介绍 -->
+                <table class="table table-striped" style="margin-top: 40px;">
+                    <tr>
+                        <td>I5</td>
+                        <td>I4</td>
+                        <td>I3</td>
+                        <td>功能</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>num1+num2</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>num1-num2</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>num1*num2</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>num1|num2</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>num1&num2</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>~(num1&num2)</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>num1⊕num2</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>num1⊙num2</td>
+                    </tr>
+                  </table>
+
+            </div>   
+            <div class="col-md-8 col-xs-12 leftBox">
+                
+                <h3>输入</h3>
+                <!-- 输入第一个数 -->
+                <div class="firstNum num">
+                    <div><input type="checkbox" name="sg" id="sg15" ><label for="sg15">D15</label></div>
+                    <div><input type="checkbox" name="sg" id="sg14" ><label for="sg14">D14</label></div>
+                    <div><input type="checkbox" name="sg" id="sg13" ><label for="sg13">D13</label></div>
+                    <div><input type="checkbox" name="sg" id="sg12" ><label for="sg12">D12</label></div>
+                    <div><input type="checkbox" name="sg" id="sg11" ><label for="sg11">D11</label></div>
+                    <div><input type="checkbox" name="sg" id="sg10" ><label for="sg10">D10</label></div>
+                    <div><input type="checkbox" name="sg" id="sg9"  ><label for="sg9">D9</label></div>
+                    <div><input type="checkbox" name="sg" id="sg8"  ><label for="sg8">D8</label></div>
+                </div> 
+
+                <!-- 输入第二个数 -->
+                <div class="secondNum num">
+                    <input type="checkbox" name="sg" id="sg7"><label for="sg7">D7</label>
+                    <input type="checkbox" name="sg" id="sg6"><label for="sg6">D6</label>
+                    <input type="checkbox" name="sg" id="sg5"><label for="sg5">D5</label>
+                    <input type="checkbox" name="sg" id="sg4"><label for="sg4">D4</label>
+                    <input type="checkbox" name="sg" id="sg3"><label for="sg3">D3</label>
+                    <input type="checkbox" name="sg" id="sg2"><label for="sg2">D2</label>
+                    <input type="checkbox" name="sg" id="sg1"><label for="sg1">D1</label>
+                    <input type="checkbox" name="sg" id="sg0"><label for="sg0">D0</label>
+                </div>
+                
+
+                <h3>寄存器</h3>
+
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">溢出</span>
+                    <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" id="isCarry" value="No">
+                    <span class="input-group-addon" id="basic-addon1 ">正负</span> 
+                    <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" id="symbol" value="Positive">
+                    <span class="input-group-addon" id="basic-addon1">IR</span>
+                    <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" id="ir" value="">
+                    <span class="input-group-addon" id="basic-addon1 ">ACC</span> 
+                    <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" id="acc" value="">             
+                  </div>
+
+                <h3>进位显示</h3>
+                <div class="carry">
+                    
+                    
+                    <div class="input-group">
+                      <span class="input-group-addon" id="basic-addon1">c7</span>
+                      <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" id="c7" value="0">
+                      <span class="input-group-addon" id="basic-addon1 ">c6</span> 
+                      <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" id="c6" value="0">
+                      <span class="input-group-addon" id="basic-addon">c5</span> 
+                      <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" id="c5" value="0">
+                      <span class="input-group-addon" id="basic-addon1">c4</span>  
+                      <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" id="c4" value="0">
+                      <span class="input-group-addon" id="basic-addon1">c3</span> 
+                      <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" id="c3" value="0">
+                      <span class="input-group-addon" id="basic-addon1">c2</span> 
+                      <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" id="c2" value="0">
+                      <span class="input-group-addon" id="basic-addon1">c1</span>  
+                      <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" id="c1" value="0">
+                      <span class="input-group-addon" id="basic-addon1">c0</span>  
+                      <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon1" id="c0" value="0">
+                    </div>
+                </div>
+
+                <h3>输出结果</h3>
+                <div>
+                    <div class="light light0"></div>
+                    <div class="light light1"></div>
+                    <div class="light light2"></div>
+                    <div class="light light3"></div>
+                    <div class="light light4"></div>
+                    <div class="light light5"></div>
+                    <div class="light light6"></div>
+                    <div class="light light7"></div> 
+                </div>
+                <button class="btn" onclick="result()">输出</button>
+              
+        
+            </div>
+
+         
+        </div>
+
+
+    </div>
+    <script>
+
+
+
+    </script>
+</body>
+</html>

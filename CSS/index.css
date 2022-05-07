@@ -1,0 +1,148 @@
+
+/* 载入字体
+@font-face {
+    font-family: 'HarmonyOS_Sans_SC_Medium';
+    src: url(../HarmonyOS_Sans/HarmonyOS_Sans_SC_Medium.ttf);
+}
+
+/* 全局使用鸿蒙字体 
+body{
+    font-family:"HarmonyOS_Sans_SC_Medium";
+} */
+/* 右侧布局全局样式 */
+.leftBox{
+    margin-top: 10px;
+}
+    
+/* 左侧布局全局样式 */
+.rightBox{
+    margin-top: 10px;
+    background-color: rgb(231, 227, 221); 
+    border-radius: 20px;
+}
+.num {
+    height: 40px;
+    margin-bottom: 10px;
+}
+.num input{
+    display: none;
+}
+.num label{
+    border: 1px solid #adadad;
+    padding: 2px 10px 2px 5px;
+    line-height: 28px;
+    min-width: 80px;
+    text-align: center;
+    float: left;
+    margin: 5px;
+    border-radius: 25px;
+}
+.num input:checked+label{
+    background-color: greenyellow;
+    
+}
+.clear{
+    clear: both;
+}
+
+.light {
+    display: inline-block;
+    margin: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: greenyellow;
+}
+
+.inputbox input {
+    height: 30px;
+    
+    
+}
+
+.chooseBtn {
+    display: none;
+}
+
+.choose-label {
+    box-shadow: #ccc 0px 0px 0px 1px;
+    width: 40px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 20px;
+    position: relative;
+    background-color: #bdbdbd;
+    overflow: hidden;
+}
+
+.choose-label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 20px;
+    background-color: #fff;
+    z-index: 20;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.chooseBtn:checked + label.choose-label:before {
+    left: 30px;
+}
+
+.chooseBtn:checked + label.choose-label {
+    background-color: #51ccee;
+}
+
+.jumbotron {
+    margin: auto;
+}
+
+/* 美化按钮 */
+.btn {
+    /* 文字颜色 */
+    color: #0099CC; 
+    /* 清除背景色 */
+    background: transparent; 
+    /* 边框样式、颜色、宽度 */
+    border: 2px solid #0099CC;
+    /* 给边框添加圆角 */
+    border-radius: 6px; 
+    /* 字母转大写 */
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 16px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.btn {
+    margin: auto;
+    margin-left:308px;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+    border-radius: 40px;
+}
+/* 悬停样式 */
+.btn:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
